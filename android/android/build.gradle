@@ -1,0 +1,32 @@
+/*
+  Build.Gradle for Fyusion SDK
+    Build Command : gradle getDeps - Places downloaded .aar files in modules lib directory.
+    Updating : Modify the SDK date on the end of the implementation lines.
+*/
+
+apply plugin: 'java'
+
+repositories {
+    google()
+    jcenter()
+    maven {
+        url "https://mvn.fyu.se/artifactory/fyusion-sdk-repo"
+        credentials {
+            username "fyusion-sdk-repo-user-traderinteractive"
+            password "Ed_zfbfeexhWufNsJetukK%Zm4yULC@bYku45Zcp"
+        }
+    }
+}
+dependencies {
+    compile group: 'com.android.support', name: 'appcompat-v7', version: '27.1.0'
+    compile group: 'com.android.support', name: 'support-vector-drawable', version: '27.1.0'
+
+    implementation("com.fyusion.sdk:fyusesdk:2018.3.3")
+    implementation("com.fyusion.sdk:fyusesdk-ext-car-mode-flow:2018.3.3")
+}
+
+task getDeps(type: Copy) {
+	from sourceSets.main.runtimeClasspath
+	exclude 'support-*' // The support libraries are packaged with Titanium already
+	into 'lib'
+}

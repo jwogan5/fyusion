@@ -1,0 +1,16 @@
+=begin
+  PodFile for Fyusion SDK
+  Build Command : pod install
+  Move Framework : copy the framework file to platform
+  Updating : Modify the tag line to a new version.
+=end
+
+install! 'cocoapods',
+         :integrate_targets => false
+
+use_frameworks!
+
+platform :ios, '9.0'
+target 'ifyusion' do
+    pod 'FyuseSessionTagging', podspec: 'https://api.fyu.se/1.1/releases/spec/cocoa/XVALSWU78883IZ4EB4BZN0TT9N3U1DI4S9N/latest.podspec'
+end

@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.0.1
+apiversion: 2
+architectures: armv7 arm64 i386 x86_64
+description: TraderInterative Fyusion iOS Module
+author: Jason Wogan
+license: Specify your license
+copyright: 2018 TraderInteractive
+
+# these should not be edited
+name: ifyusion
+moduleid: com.traderinteractive.fyusion
+guid: 6bd3cdbd-b232-42c3-b39d-2e235a9947ca
+platform: iphone
+minsdk: 7.0.2.GA

@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.0.1
+apiversion: 4
+architectures: arm64-v8a armeabi-v7a
+description: Trader Interactive's Fyusion Android Module.
+author: Jason Wogan
+license: Apache Public License
+copyright: 2018 TraderInteractive
+
+# these should not be edited
+name: afyusion
+moduleid: com.traderinteractive.fyusion
+guid: 585e48f1-ddcb-4723-a4f5-3f5a7f88404a
+platform: android
+minsdk: 7.0.2.GA
